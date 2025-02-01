@@ -1,0 +1,102 @@
+:root {
+    font-size: 20px;
+    --clr-black: black;
+    --clr-white: white;
+    --dsp-flex: flex;
+    --dsp-grid: grid;
+    --txt-alin: center;
+    --txt-decor: none;
+    --lst-style: none;
+    --bx-shadow: 2px 2px 4px black;
+}
+body,html {
+    font-family: "Kumbh Sans", serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+header {
+    display: var(--dsp-flex);
+    justify-content: space-between;
+    align-items: var(--txt-alin);
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    box-shadow: var(--bx-shadow);
+    margin-inline: 1rem;
+    padding-inline: 1rem;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0.5rem;
+    z-index: 10;
+    a.agc {
+        color: var(--clr-black);
+        text-decoration: var(--txt-decor);
+        font-size: 1.5rem;
+    }
+    nav ul {
+        list-style: var(--lst-style);
+        display: var(--dsp-flex);
+        gap: 1rem;
+        li a {
+            text-decoration: var(--txt-decor);
+            color: var(--clr-black);
+        }
+    }
+}
+main{
+    height: 100%;
+    #hero {
+        position: relative;
+        text-align: var(--txt-alin);
+        div{
+            position : absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--clr-white);
+            background-color: rgba(65, 59, 59, 0.438);
+            padding: 0.5rem;
+        }
+    }
+    section:nth-child(2){
+        display: var(--dsp-flex);
+        flex-wrap: wrap;
+        align-items: var(--txt-alin);
+        h2{
+            width: 100%;
+            text-align: var(--txt-alin);
+        }
+        figure{
+            width: calc(17% - 0.5rem);
+            box-shadow: var(--bx-shadow);
+            text-align: var(--txt-alin);
+            border-radius: 0.5rem;
+            img{
+                height: 100%;
+            }
+            figcaption{
+                padding: 0.5rem;
+            }
+        }
+    }
+    section:last-child{
+        position: fixed;
+        width: 100px;
+        bottom : 2rem;
+        right: 2rem;
+    }
+}
+footer{
+    background-color: var(--clr-black);
+    text-align: var(--txt-alin);
+    p{
+        color: antiquewhite;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,81 @@
+:root {
+    font-size: 10px;
+    --txt-decor: none;
+    --clr-black: black;
+    --dsp-flex: flex;
+    --dsp-grid: grid;
+    --txt-alin : center;
+    --bx-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu Sans mono", serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+header nav {
+    margin-inline: 1.5rem;
+    margin-bottom: 1.5rem;
+    a {
+        text-decoration: var(--txt-decor);
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--clr-black);
+    }
+}
+main section {
+    display: var(--dsp-flex);
+    flex-direction: column;
+    gap : 1.5rem;
+    figure{
+        width: 100%;
+        box-shadow: var(--bx-shadow);
+        border-radius: 1rem;
+        margin-left: 0;
+        figcaption{
+            padding: 1rem;
+        }
+    }
+}
+footer{
+    color: bisque;
+    background-color: var(--clr-black);
+    text-align: var(--txt-alin);
+    p{   
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+@media(min-width: 768px){
+    :root{
+        font-size: 15px;
+    }
+    header nav {
+        margin-left: 2.5rem;
+    }
+    body, html, main {
+        height: 94vh;
+    }
+    main section {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: var(--txt-alin);
+        figure{
+            width: 40%;
+        }
+    }
+}
+@media(min-width: 1024px){
+    :root{
+        font-size: 20px;
+    }
+    main section{
+        flex-wrap: nowrap;
+    }
+}
