@@ -1,0 +1,130 @@
+:root {
+    font-size: 10px;
+    --txt-decor: none;
+    --clr-black: black;
+    --dsp-flex: flex;
+    --dsp-grid: grid;
+    --bx-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu Sans mono", serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+header {
+    /*header styel */
+    padding-bottom: 1rem;
+    a {
+        text-decoration: var(--txt-decor);
+        font-size: 2rem;
+        color: var(--clr-black);
+        font-weight: 500;
+        margin-right: 3rem;
+    }
+}
+main {
+    /* main style */
+    section {
+        display: var(--dsp-flex);
+        flex-direction: column;
+        gap: 1.5rem;
+        figure {
+            box-shadow: var(--bx-shadow);
+            border-radius: 0.3rem;
+            width: 100%;
+            margin: 0;
+            figcaption {
+                padding-left: 0.5rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+footer{ /* footer style */
+    text-align: center;
+    background-color: var(--clr-black);
+   p{
+    color: aliceblue;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+   } 
+}
+@media(min-width: 768px){
+    :root{
+        font-size: 14px;
+    }
+    body,html{
+        height: 93vh;
+    }
+    header{
+        padding-bottom: 1.5rem;
+        a{
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+    }
+    main{
+        height: 100%;
+        section{
+            display: var(--dsp-grid);
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media(min-width: 1024px){
+    :root{
+        font-size: 18px;
+    }
+    html, body{
+        width: 100%;
+    }
+    main{
+        section{
+            display: var(--dsp-grid);
+            grid-template-columns:repeat(4, 1fr);
+        }
+        figure{
+            position: relative;
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+            figcaption{
+                display: none;
+                position : absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2rem;
+            }
+        }
+        figure:hover figcaption{
+                display: block;
+                color: white;       
+        }
+        /* background opacity for figure */
+        figure::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(66, 60, 60, 0.336);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        figure:hover::after{
+            opacity: 1;
+        }
+    }
+
+}
