@@ -30,8 +30,7 @@ header {
 main {
     /* main style */
     section {
-        display: var(--dsp-flex);
-        flex-direction: column;
+        display: var(--dsp-grid);
         gap: 1.5rem;
         figure {
             box-shadow: var(--bx-shadow);

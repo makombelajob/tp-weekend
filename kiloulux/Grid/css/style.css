@@ -78,6 +78,7 @@ main section {
         figure {
             box-shadow: var(--bx-shadow);
             text-align: var(--txt-alin);
+            border-radius: 0.4rem;
             img {
                 height: auto;
             }
